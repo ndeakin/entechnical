@@ -1,0 +1,43 @@
+var canvasHeight = $('#container').height(),
+		canvasWidth = $('#container').width();
+
+var initReturn = NICKGL.Init(35, canvasWidth, canvasHeight);
+
+var renderer = initReturn.renderer,
+		scene = initReturn.scene,
+		camera = initReturn.camera;
+
+var radius = 50,
+		segments = 16,
+		rings = 16;
+
+var pointLight = new THREE.DirectionalLight(0xFFFFFF);
+
+pointLight.position.x = 0.2;
+pointLight.position.y = 1;
+pointLight.position.z = 0;
+pointLight.intensity = 2.5;
+
+scene.add(pointLight);
+
+camera.position.y = 200;
+camera.rotation.x = -Math.PI/2;
+
+var loader = new THREE.JSONLoader();
+
+function createMesh( geometry, material ){
+	var mesh = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(
+				material ) );
+	//mesh.material.transparency = 0;
+	//mesh.color = new THREE.Color("0xFF0000");
+	mesh.position.x = 0;
+	mesh.position.y = 0;
+	mesh.position.z = 0;
+	mesh.rotation.z = -0.5;
+	mesh.scale.set( 100, 100, 100);
+	//mesh.overdraw = true;
+	scene.add( mesh );
+	renderer.render(scene, camera);
+};
+
+loader.load( "assets/entechnical.json", createMesh );

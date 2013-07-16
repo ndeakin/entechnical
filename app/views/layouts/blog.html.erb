@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>entechnical</title>
+  <%= stylesheet_link_tag "blog", :media => "all" %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="<%= params[:action] %>">
+
+<%= render 'navigation' %>
+
+<%= yield %>
+
+<%= javascript_include_tag "blog" %>
+
+</body>
+</html>
