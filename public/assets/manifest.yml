@@ -23,5 +23,7 @@ entechnical_squished.json: entechnical_squished-b3ec414c69382a6ef0a444d6e95005d0
 entechnical_squished/index.json: entechnical_squished-b3ec414c69382a6ef0a444d6e95005d0.json
 application.css: application-a388a5941208a4e6098fcb38248230a0.css
 application/index.css: application-a388a5941208a4e6098fcb38248230a0.css
+blog.css: blog-37b26940e103c2ec43c74147736217fe.css
+blog/index.css: blog-37b26940e103c2ec43c74147736217fe.css
 jquery.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
 jquery/index.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
