@@ -1,84 +1,129 @@
+$site-orange: #FF8100;
+$site-blue: #1533AD;
+$site-green: #00BD39;
+$site-font: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "    AppleGothic", sans-serif;
+
 body {
 	margin: 0px;
 	padding: 0px;
 	border: 0px;
-	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	font-family: $site-font;
+	height: 100vh;
+	width: 100vw;
+	background: url(/assets/smooth_wall.png) repeat 0 0;
 }
 
+p {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+#navbackground {
+	background-color: white;
+	width: 800px;
+	height: 100px;
+	z-index: -1;
+	position: absolute;
+	left: 50%;
+	margin-left: -400px;
+	//margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+	
 #nav {
 	width: 100%;
 	height: 100px;
+
+	#navbuttons {
+		position: relative;
+		display: inline-block;
+		width: 50%;
+		height: 36px;
+		padding: 0px;
+		margin-top: 31px;
+		margin-bottom: 33px;
+		border: 0px;
+		background-color: #000000;
+
+		a.navbutton {
+			float: right;
+			color: #FFFFFF;
+			text-decoration: none;
+			padding: 0px 10px 0px 10px;
+			height: 36px;
+			line-height: 36px;
+			border-color: #000000;
+			border-left: 1px;
+			border-left-style: solid;
+			border-right-style: none;
+			border-top-style: none;
+			border-bottom-style: none;
+			
+			&:hover {
+				float: right;
+				background-color: $site-blue;
+			}
+		}
+		
+		body.home & #navhome {
+			color: $site-green;
+			border-color: #FFFFFF;
+		}
+		body.blog & #navblog {
+			color: $site-green;
+			border-color: #FFFFFF;
+		}
+		body.about & #navabout {
+			color: $site-green;
+			border-color: #FFFFFF;
+		}
+	
+	}
+	
+	#logoarea {
+		display: inline-block;
+		width: 400px;
+		height: 100%;
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+	
+		a.logo {
+			vertical-align: center;
+			float: left;
+			height: 60px;
+			margin-top: 17px;
+			margin-bottom: 23px;
+			color: $site-orange;
+			text-decoration: none;
+			font-size: 300%;
+			font-weight: 600;
+			&:hover {
+				text-shadow: 1px 1px #000000;
+				margin-top: 16px;
+				margin-left: -1px;
+			}
+		}
+
+	}	
 }
 
-#navbuttons {
-	display: inline-block;
-	width: 50%;
-	height: 36px;
-	padding: 0px;
-	margin-top: 31px;
-	margin-bottom: 33px;
-	border: 0px;
-	background-color: #000000;
-
-}
-
-a.navbutton {
-	float: right;
-	color: #FFFFFF;
-	text-decoration: none;
-	padding: 0px 10px 0px 10px;
-	height: 36px;
-	line-height: 36px;
-	border-color: #000000;
-	border-left: 1px;
-	border-left-style: solid;
-	border-right-style: none;
-	border-top-style: none;
-	border-bottom-style: none;
-	//border-width: 2px;
-	//margin-top: 40px;
-	//margin-bottom: 40px;
-}
-
-a.navbutton:hover {
-	float: right;
-	background-color: #00FF00;
-}
-
-body.home	#navhome {
-	color: #FF8000;
-	border-color: #FFFFFF;
-}
-
-body.blog #navblog {
-	color: #FF8000;
-	border-color: #FFFFFF;
-}
-
-body.about #navabout {
-	color: #FF8000;
-	border-color: #FFFFFF;
-}
-
-#logoarea {
-	display: inline-block;
-	width: 400px;
+#content {
 	height: 100%;
+	width: 800px;
+	background-color: white;
+	margin: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
 	padding: 0px;
-	margin: 0px;
-	border: 0px;
+
+	p {
+		font-style: italic;
+		font-size: 125%;
+		display: inline-block;
+		margin-top: 50px;
+	}
 }
 
-a.logo {
-	vertical-align: center;
-	float: left;
-	height: 60px;
-	margin-top: 17px;
-	margin-bottom: 23px;
-	color: #FF8000;
-	text-decoration: none;
-	font-size: 300%;
-	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-	font-weight: 600;
-	text-shadow: 2px 1px #000000;
-}
