@@ -1,6 +1,7 @@
 $site-orange: #FF8100;
 $site-blue: #1533AD;
 $site-green: #00BD39;
+$site-brown: #A65400;
 $site-font: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "    AppleGothic", sans-serif;
 
 body {
@@ -11,6 +12,7 @@ body {
 	height: 100vh;
 	width: 100vw;
 	background: url(/assets/smooth_wall.png) repeat 0 0;
+	position: relative;
 }
 
 p {
@@ -27,7 +29,6 @@ p {
 	position: absolute;
 	left: 50%;
 	margin-left: -400px;
-	//margin: 0px;
 	padding: 0px;
 	border: 0px;
 }
@@ -35,7 +36,8 @@ p {
 #nav {
 	width: 100%;
 	height: 100px;
-
+	position: absolute;
+	z-index: 1;
 	#navbuttons {
 		position: relative;
 		display: inline-block;
@@ -111,13 +113,16 @@ p {
 }
 
 #content {
+	position: relative;
 	height: 100%;
 	width: 800px;
 	background-color: white;
 	margin: auto;
-	margin-top: 0px;
+	//margin-top: 100px;
 	margin-bottom: 0px;
 	padding: 0px;
+	padding-top: 100px;
+	text-align: center;
 
 	p {
 		font-style: italic;
