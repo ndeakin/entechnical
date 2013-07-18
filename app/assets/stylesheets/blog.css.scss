@@ -2,7 +2,35 @@ $site-orange: #FF8100;
 $site-blue: #1533AD;
 $site-green: #00BD39;
 $site-brown: #A65400;
+$site-grey: #282828;
+
+$black: #000000;
+$white: #FFFFFF;
 $site-font: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "    AppleGothic", sans-serif;
+
+@mixin orange-hover {
+	&:hover {
+		background-color: $white;
+		color: $site-orange;
+		border-color: $white;
+	}
+}
+
+@mixin content-align {
+		text-align: justify;
+
+		& p, & div {
+			margin: 45px;
+			//padding: 45px;
+		}
+}
+
+@mixin no-padmargin {
+	& {
+		padding: 0px;
+		margin: 0px;
+	}
+}
 
 body {
 	margin: 0px;
@@ -22,7 +50,7 @@ p {
 }
 
 #navbackground {
-	background-color: white;
+	background-color: $white;
 	width: 800px;
 	height: 100px;
 	z-index: -1;
@@ -31,6 +59,8 @@ p {
 	margin-left: -400px;
 	padding: 0px;
 	border: 0px;
+
+	//box-shadow: 0px 15px 15px -15px #111111;
 }
 	
 #nav {
@@ -47,41 +77,45 @@ p {
 		margin-top: 31px;
 		margin-bottom: 33px;
 		border: 0px;
-		background-color: #000000;
+		background-color: $black;
+		//background: url(/assets/subtle_carbon.png) repeat 0 0;
 
+		body.home & #navhome {
+			color: $site-orange;
+			border-color: #FFFFFF;
+			@include orange-hover;
+		}
+		body.blog & #navblog {
+			color: $site-orange;
+			border-color: $white;
+			@include orange-hover;
+		}
+		body.about & #navabout {
+			color: $site-orange;
+			border-color: $white;
+			@include orange-hover;
+		}
+	
 		a.navbutton {
 			float: right;
-			color: #FFFFFF;
+			color: $white;
 			text-decoration: none;
 			padding: 0px 10px 0px 10px;
 			height: 36px;
 			line-height: 36px;
-			border-color: #000000;
+			border-color: $white;
 			border-left: 1px;
 			border-left-style: solid;
 			border-right-style: none;
 			border-top-style: none;
 			border-bottom-style: none;
 			
+			@include orange-hover;
 			&:hover {
 				float: right;
-				background-color: $site-blue;
 			}
 		}
-		
-		body.home & #navhome {
-			color: $site-green;
-			border-color: #FFFFFF;
-		}
-		body.blog & #navblog {
-			color: $site-green;
-			border-color: #FFFFFF;
-		}
-		body.about & #navabout {
-			color: $site-green;
-			border-color: #FFFFFF;
-		}
-	
+
 	}
 	
 	#logoarea {
@@ -103,7 +137,7 @@ p {
 			font-size: 300%;
 			font-weight: 600;
 			&:hover {
-				text-shadow: 1px 1px #000000;
+				text-shadow: 1px 1px $site-grey;
 				margin-top: 16px;
 				margin-left: -1px;
 			}
@@ -116,15 +150,39 @@ p {
 	position: relative;
 	height: 100%;
 	width: 800px;
-	background-color: white;
+	background-color: $white;
 	margin: auto;
-	//margin-top: 100px;
 	margin-bottom: 0px;
 	padding: 0px;
 	padding-top: 100px;
-	text-align: center;
 
-	p {
+	z-index: -2;
+
+	@include content-align;	
+
+	body.about & div.about-subtle-carbon {
+		display: inline-block;
+		margin: 45px;
+		background: url(/assets/subtle_carbon.png) repeat 0 0;
+		color: $white;
+	}
+
+	p.about-intro {
+		font-size: 150%;
+	}
+
+	p.about-body {
+		margin-top: 10px;
+		margin-bottom: 10px
+	}
+
+	p.about-end {
+		margin-top: 10px;
+		margin-bottom: 45px;
+	}
+
+	body.home & p, body.blog & p {
+		text-align: center;
 		font-style: italic;
 		font-size: 125%;
 		display: inline-block;
