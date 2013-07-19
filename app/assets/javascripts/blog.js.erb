@@ -1,5 +1,14 @@
-if (($('#content').height() + $('#nav').height()) < $(window).height())
-{
-	$('#content').height( $(window).height() - $('#nav').height()
-			- parseInt( $('#content').css('marginBottom') ) );
-}
+var menuTop = null;
+var old_offset = null;
+var delta = 0;
+
+$(document).ready( function(){
+
+	if ( ($('#content').height() + $('#navigation').height()) 
+				< $(window).height())
+	{
+		$('#content').height( $(window).height() - $('#navigation').height()
+				- parseInt( $('#content').css('marginBottom') ) );
+	}
+
+});

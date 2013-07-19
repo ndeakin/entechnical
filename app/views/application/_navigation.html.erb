@@ -1,14 +1,16 @@
-<div id="navbackground"></div>
-<div id="nav">
-	<div id="navbuttons">
-		<%= link_to "About", about_path, :class => "navbutton", 
-					:id => "navabout" %>
-		<%= link_to "Blog", blog_path, :class => "navbutton",
-					:id => "navblog" %>
-		<%= link_to "Home", root_path, :class => "navbutton",
-					:id => "navhome" %>
-	</div>
-	<div id="logoarea">
-		<%= link_to "entechnical", root_path, :class => "logo" %>
+<div id="navigation">
+	<div id="nav-background"></div>
+	<div id="nav-panel">
+		<div id="nav-buttons">
+			<%= link_to "About", about_path, :class => "nav-button", 
+						:id => "nav-about" %>
+			<%= link_to "Blog", blog_path, :class => "nav-button",
+						:id => "nav-blog" %>
+			<%= link_to "Home", root_path, :class => "nav-button",
+						:id => "nav-home" %>
+		</div>
+		<div id="logo-area">
+			<%= link_to "entechnical", root_path, :class => "logo" %>
+		</div>
 	</div>
 </div>
