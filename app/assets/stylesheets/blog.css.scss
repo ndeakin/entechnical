@@ -39,8 +39,9 @@ body {
 	font-family: $site-font;
 	height: 100vh;
 	width: 100vw;
-	background: url(/assets/smooth_wall.png) repeat 0 0;
+	//background: url(/assets/project_papper.png) repeat 0 0;
 	position: relative;
+	overflow-x: hidden;
 }
 
 p {
@@ -151,8 +152,9 @@ p {
 	height: 100%;
 	width: 800px;
 	background-color: $white;
+	//background: url(/assets/project_papper.png) repeat 0 0;
 	margin: auto;
-	margin-bottom: 0px;
+	margin-bottom: 50px;
 	padding: 0px;
 	padding-top: 100px;
 
@@ -164,11 +166,14 @@ p {
 		display: inline-block;
 		margin: 45px;
 		background: url(/assets/subtle_carbon.png) repeat 0 0;
+		box-shadow: 5px 5px 0px 0px $site-orange;
 		color: $white;
 	}
 
 	p.about-intro {
 		font-size: 150%;
+		margin-top: 30px;
+		margin-bottom: 30px;
 	}
 
 	p.about-body {
@@ -178,7 +183,7 @@ p {
 
 	p.about-end {
 		margin-top: 10px;
-		margin-bottom: 45px;
+		margin-bottom: 30px;
 	}
 
 	body.home & p, body.blog & p {
@@ -188,5 +193,16 @@ p {
 		display: inline-block;
 		margin-top: 50px;
 	}
+}
+
+#footer {
+	width: 100%;
+	height: 100px;
+	background: url(/assets/black_twill.png) repeat 0 0;
+}
+
+a.email {
+	color: $site-orange;
+	font-decoration: underline;
 }
 
