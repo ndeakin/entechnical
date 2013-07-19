@@ -42,6 +42,7 @@ body {
 	//background: url(/assets/project_papper.png) repeat 0 0;
 	position: relative;
 	overflow-x: hidden;
+	z-index: 1;
 }
 
 p {
@@ -149,7 +150,7 @@ p {
 
 #content {
 	position: relative;
-	height: 100%;
+	//height: 100%;
 	width: 800px;
 	background-color: $white;
 	//background: url(/assets/project_papper.png) repeat 0 0;
@@ -162,28 +163,48 @@ p {
 
 	@include content-align;	
 
-	body.about & div.about-subtle-carbon {
-		display: inline-block;
-		margin: 45px;
-		background: url(/assets/subtle_carbon.png) repeat 0 0;
-		box-shadow: 5px 5px 0px 0px $site-orange;
-		color: $white;
+	body.about & {
+		div.about-subtle-carbon {
+			z-index: 1;
+			display: inline-block;
+			position: relative;
+			margin-left: 45px;
+			margin-right: 45px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			background: url(/assets/subtle_carbon.png) repeat 0 0;
+			box-shadow: 5px 5px 0px 0px $site-orange;
+			color: $white;
+			#about-text {
+				z-index: 1;
+				margin-left: 45px;
+				margin-right: 45px;
+				margin-top: 30px;
+				margin-bottom: 30px;
+			}
+		}
 	}
 
 	p.about-intro {
 		font-size: 150%;
+		margin-left: 0px;
 		margin-top: 30px;
 		margin-bottom: 30px;
+		position: relative;
 	}
 
 	p.about-body {
+		margin: 0px;
 		margin-top: 10px;
-		margin-bottom: 10px
+		margin-bottom: 10px;
+		position: relative;
 	}
 
 	p.about-end {
+		margin: 0px;
 		margin-top: 10px;
 		margin-bottom: 30px;
+		position: relative;
 	}
 
 	body.home & p, body.blog & p {
@@ -199,10 +220,15 @@ p {
 	width: 100%;
 	height: 100px;
 	background: url(/assets/black_twill.png) repeat 0 0;
+
 }
 
 a.email {
 	color: $site-orange;
 	font-decoration: underline;
+}
+
+p {
+	z-index: 2;
 }
 

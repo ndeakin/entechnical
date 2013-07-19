@@ -1,1 +1,5 @@
-$('#content').height( $(window).height() - $('#nav').height() );
+if (($('#content').height() + $('#nav').height()) < $(window).height())
+{
+	$('#content').height( $(window).height() - $('#nav').height()
+			- parseInt( $('#content').css('marginBottom') ) );
+}
