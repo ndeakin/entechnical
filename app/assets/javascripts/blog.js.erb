@@ -7,8 +7,24 @@ $(document).ready( function(){
 	if ( ($('#content').height() + $('#navigation').height()) 
 				< $(window).height())
 	{
-		$('#content').height( $(window).height() - $('#navigation').height()
-				- parseInt( $('#content').css('marginBottom') ) );
+		if ( ($('#content').height() + $('#navigation').height() 
+						+ $('#footer').height() ) < $(window).height()) {
+			$('#content').height( $(window).height() 
+					- $('#footer').height()
+					- $('#navigation').height()
+					- parseInt( $('#content').css('marginBottom') ) );
+		}
+		else {
+			$('#content').height( $(window).height() 
+					- $('#navigation').height()
+					- parseInt( $('#content').css('marginBottom') ) );
+		}
+	}
+
+	if ( $('#navigation').width() > $(window).width() ) {
+		$("body").css({
+			'overflow-x': 'true'
+		})
 	}
 
 });
