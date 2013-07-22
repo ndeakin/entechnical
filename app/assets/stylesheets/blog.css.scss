@@ -21,69 +21,46 @@ $site-font: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "    App
 
 		& p, & div {
 			margin: 45px;
-			//padding: 45px;
 		}
 }
 
-@mixin no-padmargin {
+@mixin no-spacing {
 	& {
 		padding: 0px;
 		margin: 0px;
+		border: 0px;
 	}
 }
 
 body {
-	//display: block;
-	bottom: 0;
-	margin: 0px;
-	padding: 0px;
-	border: 0px;
+	@include no-spacing;
 	font-family: $site-font;
 	height: 100%;
 	width: 100%;
-	//background: url(/assets/project_papper.png) repeat 0 0;
 	position: relative;
-	//padding-right: 20px;
 	overflow-x: auto;
 	z-index: 1;
 }
 
-p {
-	margin: 0px;
-	padding: 0px;
-	border: 0px;
-}
-
 #nav-background {
 	background-color: $white;
-	//width: 800px;
 	width: 100%;
 	height: 100px;
 	z-index: 2;
 	position: fixed;
 	right: 0;
-	//left: 50%;
-	//margin-left: -400px;
-	padding: 0px;
-	border: 0px;
-
-	//box-shadow: 0px 15px 15px -15px #111111;
+	@include no-spacing;
 }
 
 #navigation {
 	position: relative;
 	top: 0;
-	//z-index: -3;
 	width: 100%;
-	//width: 800px;
-	//min-width: 800px;
 	height: 100px;
-	//box-shadow:	0px 15px 15px -15px #000000;
 }
 
 #nav-panel {
 	width: 100%;
-	//min-width: 800px;
 	height: 100px;
 	position: fixed;
 	left: 0;
@@ -100,7 +77,6 @@ p {
 		margin-bottom: 33px;
 		border: 0px;
 		background-color: $black;
-		//background: url(/assets/subtle_carbon.png) repeat 0 0;
 
 		body.home & #nav-home {
 			color: $site-orange;
@@ -170,14 +146,11 @@ p {
 
 #content {
 	position: relative;
-	height: 100%;
-	width: 800px;
+	max-width: 800px;
 	background-color: $white;
-	//background: url(/assets/project_papper.png) repeat 0 0;
 	margin: auto;
 	margin-bottom: 50px;
 	padding: 0px;
-	//padding-top: 100px;
 
 	z-index: -2;
 
@@ -239,12 +212,8 @@ p {
 
 #footer {
 	width: 100%;
-	min-width: 800px;
 	height: 100px;
 	background: url(/assets/black_twill.png) repeat 0 0;
-	//bottom: 0px;	
-	//margin: 0px;
-	//padding: 0px;
 	#footer-e {
 		display: block;
 	}
