@@ -33,15 +33,16 @@ $site-font: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "    App
 }
 
 body {
+	//display: block;
+	bottom: 0;
 	margin: 0px;
 	padding: 0px;
 	border: 0px;
 	font-family: $site-font;
-	height: 100vh;
+	height: 100%;
 	width: 100%;
 	//background: url(/assets/project_papper.png) repeat 0 0;
 	position: relative;
-	
 	//padding-right: 20px;
 	overflow-x: auto;
 	z-index: 1;
@@ -92,6 +93,7 @@ p {
 		position: relative;
 		display: inline-block;
 		width: 50%;
+		min-width: 200px;
 		height: 36px;
 		padding: 0px;
 		margin-top: 31px;
@@ -168,7 +170,7 @@ p {
 
 #content {
 	position: relative;
-	//height: 100%;
+	height: 100%;
 	width: 800px;
 	background-color: $white;
 	//background: url(/assets/project_papper.png) repeat 0 0;
@@ -240,9 +242,11 @@ p {
 	min-width: 800px;
 	height: 100px;
 	background: url(/assets/black_twill.png) repeat 0 0;
-	
+	//bottom: 0px;	
+	//margin: 0px;
+	//padding: 0px;
 	#footer-e {
-		//margin-left: 5px;
+		display: block;
 	}
 }
 

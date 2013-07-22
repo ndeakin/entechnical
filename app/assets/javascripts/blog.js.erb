@@ -1,7 +1,3 @@
-var menuTop = null;
-var old_offset = null;
-var delta = 0;
-
 $(document).ready( function(){
 
 	if ( ($('#content').height() + $('#navigation').height()) 
@@ -20,11 +16,11 @@ $(document).ready( function(){
 					- parseInt( $('#content').css('marginBottom') ) );
 		}
 	}
-
+/*
 	if ( $('#navigation').width() > $(window).width() ) {
 		$("body").css({
 			'overflow-x': 'true'
 		})
 	}
-
+*/
 });
