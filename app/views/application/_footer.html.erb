@@ -1,4 +1,14 @@
 <div id="footer">
-	<img id="footer-e" src="/assets/black_twill_e.png" height="100" width="126">
-	
+	<div id="e-container">
+		<img id="footer-e" src="/assets/black_twill_e.png" height="100" width="126">
+	</div>
+	<div id="footer-nav">
+		<p>
+			<%= link_to "Home", root_path, :class => "nav-button",
+					 :id => "nav-home" %><br>
+			<%= link_to "Blog", blog_path, :class => "nav-button",
+				  :id => "nav-blog" %><br>
+			<%= link_to "About", about_path, :class => "nav-button",
+					:id => "nav-about" %></p>
+	</div>
 </div>
