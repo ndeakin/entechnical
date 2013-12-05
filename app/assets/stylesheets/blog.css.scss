@@ -192,15 +192,15 @@ p {
 			margin-right: 45px;
 			margin-top: 0px;
 			margin-bottom: 0px;
-			background: url(/assets/subtle_carbon.png) repeat 0 0;
-			box-shadow: 5px 5px 0px 0px $site-orange;
-			color: $white;
+			//background: url(/assets/subtle_carbon.png) repeat 0 0;
+			//box-shadow: 5px 5px 0px 0px $site-orange;
+			//color: $white;
 			#about-text {
-				z-index: 1;
+			  z-index: 1;
 				margin-left: 45px;
 				margin-right: 45px;
 				margin-top: 30px;
-				margin-bottom: 30px;
+			  margin-bottom: 30px;
 			}
 		}
 	}
@@ -244,9 +244,9 @@ p {
 	background: url(/assets/black_twill.png) repeat 0 0;
 	
 	#footer-nav {
-		width: 50%;
-		float: right;
-		margin-top: 35px;
+		//width: 50%;
+		float: left;
+		margin-top: 42px;
 		display: inline-block;
 		
 		p {
@@ -260,10 +260,10 @@ p {
 	}
 	#e-container {
 		
-		display: block;
-		width: 50%;
+		display: inline-block;
+		//width: 50%;
 		float: left;
-		margin-right: 0px;
+		margin-right: 20px;
 		#footer-e {
 			display: block;
 		}
